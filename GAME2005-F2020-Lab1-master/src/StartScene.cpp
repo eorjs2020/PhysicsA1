@@ -50,10 +50,14 @@ void StartScene::start()
 	m_pStartLabel->setParent(this);
 	addChild(m_pStartLabel);
 
+
 	m_pInstructionsLabel = new Label("Press 1 to Play", "Consolas", 40, blue, glm::vec2(400.0f, 120.0f));
 	m_pInstructionsLabel->setParent(this);
 	addChild(m_pInstructionsLabel);
 
+	m_pNameStudentID = new Label("Michale Shular 101273089, Daekoen Lee 101076401", "Consolas", 20, blue, glm::vec2(400.0f, 160.0f));
+	m_pNameStudentID->setParent(this);
+	addChild(m_pNameStudentID);
 
 	m_pShip = new Ship();
 	m_pShip->getTransform()->position = glm::vec2(400.0f, 300.0f); 
