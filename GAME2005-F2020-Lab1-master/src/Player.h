@@ -19,9 +19,20 @@ public:
 	void moveLeft();
 	void moveRight();
 
+	void getMass(float mass) { Mass = mass; }
+	void getAngle(float angle) { Angle = angle; }
+	void getVelocity(float velocity) { Velocity = velocity; }
+
 	float checkDistance(GameObject* pGameObject);
+	float checkAccel() { return Accel; }
+	float checkForce() { return Force; }
+	float checkVelocity() { return Velocity; }
+	float checkMass() { return Mass; }
+	float checkAngle() { return Angle; }
+
 
 private:
+	float Accel, Force, Mass, Angle, Velocity;
 	const float SPEED = 50.0f;
 };
 

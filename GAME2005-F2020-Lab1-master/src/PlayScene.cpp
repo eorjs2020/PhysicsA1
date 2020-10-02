@@ -17,9 +17,17 @@ void PlayScene::draw()
 
 void PlayScene::update()
 {
+	TextureManager::Instance()->draw("back", 0, 0, 0, 255, true);
 	updateDisplayList();
-
+	
+	
 	m_pDistanceLabel->setText("Distance = " + std::to_string(m_pPlayer->checkDistance(m_pEnemy)));
+	m_pAcceleration->setText("Acceleration = " + std::to_string(m_pPlayer->checkDistance(m_pEnemy)));
+	m_pForce->setText("Force = " + std::to_string(m_pPlayer->checkDistance(m_pEnemy)));
+	m_pVelocity->setText("Velocity = " + std::to_string(m_pPlayer->checkDistance(m_pEnemy)));
+	m_pPositon->setText("Positon = " + std::to_string(m_pPlayer->checkDistance(m_pEnemy)));
+	m_pMass->setText("Mass = " + std::to_string(m_pPlayer->checkDistance(m_pEnemy)));
+	m_pAngle->setText("Angle = " + std::to_string(m_pPlayer->checkDistance(m_pEnemy)));
 }
 
 void PlayScene::clean()
@@ -48,6 +56,10 @@ void PlayScene::handleEvents()
 
 void PlayScene::start()
 {
+	// BackgroundImage
+	TextureManager::Instance()->load("../Assets/textures/megaman-run-3.png", "back");
+	
+
 	// Player Sprite
 	m_pPlayer = new Player();
 	addChild(m_pPlayer);
@@ -61,4 +73,15 @@ void PlayScene::start()
 	m_pDistanceLabel = new Label("Distance", "Consolas", 40, blue, glm::vec2(400.0f, 40.0f));
 	m_pDistanceLabel->setParent(this);
 	addChild(m_pDistanceLabel);
+
+	
+	m_pDistanceLabel = new Label("Distance", "Consolas", 40, blue, glm::vec2(400.0f, 40.0f));
+	m_pDistanceLabel->setParent(this);
+	addChild(m_pDistanceLabel);
+
+	
+	m_pDistanceLabel = new Label("Distance", "Consolas", 40, blue, glm::vec2(400.0f, 40.0f));
+	m_pDistanceLabel->setParent(this);
+	addChild(m_pDistanceLabel);
+
 }

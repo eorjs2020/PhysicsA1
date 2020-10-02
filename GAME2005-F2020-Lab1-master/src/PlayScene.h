@@ -22,11 +22,17 @@ public:
 	virtual void start() override;
 private:
 	glm::vec2 m_mousePosition;
-
+	
 	Plane* m_pPlaneSprite;
 	Player* m_pPlayer;
 	Enemy* m_pEnemy;
 	Label* m_pDistanceLabel;
+	Label* m_pAcceleration;
+	Label* m_pForce;
+	Label* m_pVelocity;
+	Label* m_pPositon;
+	Label* m_pMass;
+	Label* m_pAngle;
 
 	Button* m_pBackButton;
 	Button* m_pNextButton;
